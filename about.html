@@ -1,0 +1,393 @@
+<!DOCTYPE HTML>
+<html>
+<head><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<title>About DJSCE&#39;s EXTC</title>
+	<meta name="description" content="" /><meta name="keywords" content="" /><!--[if lte IE 8]><script src="css/ie/html5shiv.js"></script><![endif]--><script src="js/jquery.min.js"></script><script src="js/jquery.dropotron.min.js"></script><script src="js/jquery.scrollgress.min.js"></script><script src="js/jquery.scrolly.min.js"></script><script src="js/jquery.slidertron.min.js"></script><script src="js/skel.min.js"></script><script src="js/skel-layers.min.js"></script><script src="js/init.js"></script><noscript>
+			<link rel="stylesheet" href="css/skel.css" />
+			<link rel="stylesheet" href="css/style.css" />
+			<link rel="stylesheet" href="css/style-xlarge.css" />
+		</noscript>
+	<link href="images/sat2.png" rel="icon" /><!--[if lte IE 9]><link rel="stylesheet" href="css/ie/v9.css" /><![endif]--><!--[if lte IE 8]><link rel="stylesheet" href="css/ie/v8.css" /><![endif]-->
+	<style type="text/css">/* ================ The Timeline ================ */
+
+.timeline {
+  position: relative;
+  width: 660px;
+  margin: 0 auto;
+  padding: 1em 0;
+  list-style-type: none;
+}
+
+.timeline:before {
+  position: absolute;
+  left: 50%;
+  top: 0;
+  content: ' ';
+  display: block;
+  width: 6px;
+  height: 100%;
+  margin-left: -3px;
+  background: rgb(80,80,80);
+  background: -moz-linear-gradient(top, rgba(80,80,80,0) 0%, rgb(80,80,80) 8%, rgb(80,80,80) 92%, rgba(80,80,80,0) 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(30,87,153,1)), color-stop(100%,rgba(125,185,232,1)));
+  background: -webkit-linear-gradient(top, rgba(80,80,80,0) 0%, rgb(80,80,80) 8%, rgb(80,80,80) 92%, rgba(80,80,80,0) 100%);
+  background: -o-linear-gradient(top, rgba(80,80,80,0) 0%, rgb(80,80,80) 8%, rgb(80,80,80) 92%, rgba(80,80,80,0) 100%);
+  background: -ms-linear-gradient(top, rgba(80,80,80,0) 0%, rgb(80,80,80) 8%, rgb(80,80,80) 92%, rgba(80,80,80,0) 100%);
+  background: linear-gradient(to bottom, rgba(80,80,80,0) 0%, rgb(80,80,80) 8%, rgb(80,80,80) 92%, rgba(80,80,80,0) 100%);
+  
+  z-index: 5;
+}
+
+.timeline li {
+  padding: 1em 1em;
+}
+
+.timeline li:after {
+  content: "";
+  display: block;
+  height: 0;
+  clear: both;
+  visibility: hidden;
+}
+
+.direction-l {
+  position: relative;
+  width: 300px;
+  float: left;
+  text-align: right;
+}
+
+.direction-r {
+  position: relative;
+  width: 300px;
+  float: right;
+}
+
+.flag-wrapper {
+  position: relative;
+  display: inline-block;
+  
+  text-align: center;
+}
+
+.flag {
+  position: relative;
+  display: inline;
+  background: rgb(248,248,248);
+  padding: 6px 10px;
+  border-radius: 5px;
+  
+  font-weight: 600;
+  text-align: left;
+}
+
+.direction-l .flag {
+  -webkit-box-shadow: -1px 1px 1px rgba(0,0,0,0.15), 0 0 1px rgba(0,0,0,0.15);
+  -moz-box-shadow: -1px 1px 1px rgba(0,0,0,0.15), 0 0 1px rgba(0,0,0,0.15);
+  box-shadow: -1px 1px 1px rgba(0,0,0,0.15), 0 0 1px rgba(0,0,0,0.15);
+}
+
+.direction-r .flag {
+  -webkit-box-shadow: 1px 1px 1px rgba(0,0,0,0.15), 0 0 1px rgba(0,0,0,0.15);
+  -moz-box-shadow: 1px 1px 1px rgba(0,0,0,0.15), 0 0 1px rgba(0,0,0,0.15);
+  box-shadow: 1px 1px 1px rgba(0,0,0,0.15), 0 0 1px rgba(0,0,0,0.15);
+}
+
+.direction-l .flag:before,
+.direction-r .flag:before {
+  position: absolute;
+  top: 50%;
+  right: -40px;
+  content: ' ';
+  display: block;
+  width: 12px;
+  height: 12px;
+  margin-top: -10px;
+  background: #fff;
+  border-radius: 10px;
+  border: 4px solid rgb(255,80,80);
+  z-index: 10;
+}
+
+.direction-r .flag:before {
+  left: -40px;
+}
+
+.direction-l .flag:after {
+  content: "";
+  position: absolute;
+  left: 100%;
+  top: 50%;
+  height: 0;
+  width: 0;
+  margin-top: -8px;
+  border: solid transparent;
+  border-left-color: rgb(248,248,248);
+  border-width: 8px;
+  pointer-events: none;
+}
+
+.direction-r .flag:after {
+  content: "";
+  position: absolute;
+  right: 100%;
+  top: 50%;
+  height: 0;
+  width: 0;
+  margin-top: -8px;
+  border: solid transparent;
+  border-right-color: rgb(248,248,248);
+  border-width: 8px;
+  pointer-events: none;
+}
+
+.time-wrapper {
+  display: inline;
+  
+  line-height: 1em;
+  font-size: 0.66666em;
+  color: #E0555A;
+  vertical-align: middle;
+}
+
+.direction-l .time-wrapper {
+  float: left;
+}
+
+.direction-r .time-wrapper {
+  float: right;
+}
+
+.time {
+  display: inline-block;
+  padding: 4px 6px;
+  background: rgb(248,248,248);
+}
+
+.desc {
+  margin: 1em 0.75em 0 0;
+  
+  font-size: 0.77777em;
+  font-style: italic;
+  line-height: 1.5em;
+}
+
+.direction-r .desc {
+  margin: 1em 0 0 0.75em;
+}
+
+/* ================ Timeline Media Queries ================ */
+
+@media screen and (max-width: 660px) {
+
+.timeline {
+ 	width: 100%;
+	padding: 4em 0 1em 0;
+}
+
+.timeline li {
+	padding: 2em 0;
+}
+
+.direction-l,
+.direction-r {
+	float: none;
+	width: 100%;
+
+	text-align: center;
+}
+
+.flag-wrapper {
+	text-align: center;
+}
+
+.flag {
+	background: rgb(255,255,255);
+	z-index: 15;
+}
+
+.direction-l .flag:before,
+.direction-r .flag:before {
+  position: absolute;
+  top: -30px;
+	left: 50%;
+	content: ' ';
+	display: block;
+	width: 12px;
+	height: 12px;
+	margin-left: -9px;
+	background: #fff;
+	border-radius: 10px;
+	border: 4px solid rgb(255,80,80);
+	z-index: 10;
+}
+
+.direction-l .flag:after,
+.direction-r .flag:after {
+	content: "";
+	position: absolute;
+	left: 50%;
+	top: -8px;
+	height: 0;
+	width: 0;
+	margin-left: -8px;
+	border: solid transparent;
+	border-bottom-color: rgb(255,255,255);
+	border-width: 8px;
+	pointer-events: none;
+}
+
+.time-wrapper {
+	display: block;
+	position: relative;
+	margin: 4px 0 0 0;
+	z-index: 14;
+}
+
+.direction-l .time-wrapper {
+	float: none;
+}
+
+.direction-r .time-wrapper {
+	float: none;
+}
+
+.desc {
+	position: relative;
+	margin: 1em 0 0 0;
+	padding: 1em;
+	background: rgb(245,245,245);
+	-webkit-box-shadow: 0 0 1px rgba(0,0,0,0.20);
+	-moz-box-shadow: 0 0 1px rgba(0,0,0,0.20);
+	box-shadow: 0 0 1px rgba(0,0,0,0.20);
+	
+  z-index: 15;
+}
+
+.direction-l .desc,
+.direction-r .desc {
+	position: relative;
+	margin: 1em 1em 0 1em;
+	padding: 1em;
+	
+  z-index: 15;
+}
+
+}
+
+@media screen and (min-width: 400px ?? max-width: 660px) {
+
+.direction-l .desc,
+.direction-r .desc {
+	margin: 1em 4em 0 4em;
+}
+
+}
+	</style>
+	<style type="text/css">
+	</style>
+	<style type="text/css">
+	</style>
+</head>
+<body><!-- Header -->
+<header class="skel-layers-fixed" id="header">
+<h1><a href="index.html">ICWiCom <span>by DJSCE</span></a></h1>
+
+<nav id="nav">
+<ul>
+	<li><a href="index.html">Home</a></li>
+	<!-- li><a href="dates.pdf">Download As PDF</a></li -->
+</ul>
+</nav>
+</header>
+<!-- Main -->
+
+<section class="wrapper style1" id="main">
+<header class="major">
+<h2 style="text-align: center;">About DJSCE&#39;s Department of Electronics and Telecommunications</h2>
+
+<p style="text-align: center;"><span style="font-size:14px;">Dwarkadas. J. Sanghvi College of Engineering started the course in Electronics &amp; Telecommunication Engineering (EXTC), in 1999 with the intake of 30. In the subsequent year, it was increased to 60. In the year 2010, it was increased to 120.Since then the intake at the undergraduate level is 120. In the year 2011, Department has started M.E. Program in Electronics &amp; telecommunication with the intake of 18 students. Affiliated to the University of Mumbai, Ph.D. Research center in the Department started from Academic year 2015 &ndash; 16.</span></p>
+
+<p style="text-align: center;"><span style="font-size:14px;">The Department is having the state-of-the-art infrastructure, which includes fully air-conditioned class rooms, laboratories and staff rooms. All the classrooms and laboratories are equipped with modern amenities such as multimedia projection, internet access. The college is also having Wireless Internet access for all the departments.</span></p>
+
+<p style="text-align: center;"><span style="font-size:14px;">The Department is having highly qualified, experienced and dedicated teaching and supporting staff. Under the guidance of the management and principal, the department is flourishing by leaps and bounds. It helped the department to attract not only meritorious students but also the rank holders in the first year admission done on the basis of their marks in CET examination. The department is committed to excellence in teaching learning process.</span></p>
+
+<h3 style="text-align: center;">VISION</h3>
+
+<p style="text-align: center;"><span style="font-size:14px;">To develop technically competent and socially responsible Electronics and Telecommunication engineers capable of fulfilling expectations at indigenous and global levels.</span></p>
+
+<h3 style="text-align: center;">MISSION</h3>
+
+<p style="text-align: center;"><span style="font-size:14px;">To provide a conducive educational environment for students by providing good infrastructural facilities, knowledge base and excellent faculty support.</span></p>
+
+<p style="text-align: center;"><span style="font-size:14px;">To provide a strong foundation of core knowledge and exposure to research culture.</span></p>
+
+<p style="text-align: center;"><span style="font-size:14px;">To motivate learners to acquire adequate professional and soft skills, to develop personality traits and eventually transform them as life-long learners.</span></p>
+
+<p style="text-align: center;"><span style="font-size:14px;">To strive and achieve practical exposure by maintaining good rapport with industry and professional network.</span></p>
+
+<h3 style="text-align: center;">PROGRAM EDUCATIONAL OBJECTIVES (PEOS)</h3>
+
+<p style="text-align: center;"><span style="font-size:14px;">&sect; To prepare learners for graduate studies by providing strong foundation of basic sciences, computer programing and thus, develop analytical aptitude, and problem solving abilities.</span></p>
+
+<p style="text-align: center;"><span style="font-size:14px;">&sect; To develop a fundamental understanding of electronic &amp; integrated circuits, communication systems and allied disciplines.</span></p>
+
+<p style="text-align: center;"><span style="font-size:14px;">&sect; To develop core competency and expertise in the diverse areas of communication covering Signal processing, Electromagnetic Engineering, Embedded Systems, Computer Communication and Advanced Wireless Networks domains.</span></p>
+
+<p style="text-align: center;"><span style="font-size:14px;">&sect; To inculcate competencies and aptitude in extending acquired technical knowledge to solve real life issues with high professional and ethical standards.</span></p>
+
+<p style="text-align: center;"><span style="font-size:14px;">&sect; To develop proficiency in soft skills and deliver adequate personality traits to enable the pass outs to pursue higher education, to find competitive employment opportunities and/or pursue entrepreneurial ventures.</span></p>
+
+<h3 style="text-align: center;">PROGRAM SPECIFIC OBJECTIVES: PSOS</h3>
+
+<p style="text-align: center;"><strong>1.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</strong><strong>PSO1 (Domain: Signal Processing)</strong></p>
+
+<p style="text-align: center;"><span style="font-size:14px;">To develop knowledge in the domain of signal analysis and processing and provide a foundation to numerous other courses that deals with signal processing applications.</span></p>
+
+<p style="text-align: center;"><strong>2.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</strong><strong>PSO2 (Domain: Embedded Systems)</strong></p>
+
+<p style="text-align: center;"><span style="font-size:14px;">To develop basic and applied knowledge of the architecture and assembly language programming for microprocessor/microcontroller based systems, along with the peripheral interfacing.</span></p>
+
+<p style="text-align: center;"><strong>3.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</strong><strong>PSO3 (Domain: RF Microwave)</strong></p>
+
+<p style="text-align: center;"><span style="font-size:14px;">To provide an in-depth understanding of electromagnetics, transmission lines and antenna concepts along with microwave devices used for RF and microwave applications.</span></p>
+
+<p style="text-align: center;"><strong>4.&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</strong><strong>PSO4 (Domain: Advanced Communication)</strong></p>
+
+<p style="text-align: center;"><span style="font-size:14px;">To develop knowledge of the fundamental techniques related to generation, transmission and reception in communication systems for a wide range of wired and wireless applications along with revolutionary technology developments.</span></p>
+
+<h3 style="text-align: center;">PROGRAM OUTCOMES:</h3>
+
+<p style="text-align: center;"><span style="font-size:14px;"><strong>Engineering graduates will be able to:</strong></span></p>
+
+<ol>
+	<li style="text-align: center;"><span style="font-size:14px;"><strong>Engineering knowledge:&nbsp;</strong>apply knowledge of mathematics, science and engineering fundamentals to solve complex engineering problems.</span></li>
+	<li style="text-align: center;"><span style="font-size:14px;"><strong>Problem Analysis:&nbsp;</strong>identify, analyse complex domain problems (from Electronics &amp; Telecommunication engineering) by reviewing relevant literature and using first principles of mathematics, sciences and engineering.</span></li>
+	<li style="text-align: center;"><span style="font-size:14px;"><strong>Design of solutions:&nbsp;</strong>develop a component and/or system level solution approach to core domain complex problems to meet the specified needs with appropriate consideration to health, safety, cultural, societal and environmental needs.</span></li>
+	<li style="text-align: center;"><span style="font-size:14px;"><strong>Conduct investigations of complex process:&nbsp;</strong>adopt appropriate research methodology to design experimental investigative methods; analyse and interpret data; and synthesize the obtained information to deduce valid conclusions.</span></li>
+	<li style="text-align: center;"><span style="font-size:14px;"><strong>Modern tool usage:&nbsp;&nbsp;</strong>select, relate and create appropriate methodologies to use laboratory tools, instruments, simulation software and IT resources to predict, model and estimate the engineering phenomenon with clear knowledge of its limitations.</span></li>
+	<li style="text-align: center;"><span style="font-size:14px;"><strong>The Engineer and Society:&nbsp;</strong>apply knowledge gained to assess impact of technologies from societal, safety, health, legal, cultural perspective and consequent responsibilities relevant to the professional engineering practice.</span></li>
+	<li style="text-align: center;"><span style="font-size:14px;"><strong>Environment and sustainability:&nbsp;</strong>understand impact of advanced means of communication and networking on societal and environmental context and thus develop means of sustainable development of technologies.</span></li>
+	<li style="text-align: center;"><span style="font-size:14px;"><strong>Ethics:&nbsp;</strong>apply ethical principles and commit to professional ethics and responsibilities and norms of engineering practice.</span></li>
+	<li style="text-align: center;"><span style="font-size:14px;"><strong>Individual and team work:&nbsp;</strong>function effectively as an individual and as a member or leader in multidisciplinary, cross-cultural and diverse settings.</span></li>
+	<li style="text-align: center;"><span style="font-size:14px;"><strong>Communication:&nbsp;</strong>communicate effectively in the form of written communication, proposals, documentation and oral presentations related to complex engineering activities with all the stake holders such as the engineering community, research community, customers, and with society at large and give or receive clear instructions.</span></li>
+	<li style="text-align: center;"><span style="font-size:14px;"><strong>Project Management and finance:&nbsp;</strong>demonstrate knowledge and understanding of the engineering and management principles and apply these to one&rsquo;s own work, as a member and leader in a team, to manage projects and in multi-disciplinary environments.</span></li>
+	<li style="text-align: center;"><span style="font-size:14px;"><strong>Life-long learning:&nbsp;</strong>recognize the need for and have the preparation and ability to engage in independent and life-long learning in the broadest context of technological change.</span></li>
+</ol>
+
+<p style="text-align: center;"></p>
+</header>
+</section>
+<!-- Footer -->
+
+<footer id="footer"><!--ul class="icons">
+					<li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
+					<li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+					<li><a href="#" class="icon fa-instagram"><span class="label">Instagram</span></a></li>
+					
+				</ul--><span class="copyright">&copy; ICWiCom <span id="info">Infotech Team</span></span>
+
+<div id="credit"><span class="copyright">Design by <a href="http://www.abhishekbalam.wix.com/projects" target="_blank">Abhishek Balam</a> </span></div>
+<span class="copyright"> </span></footer>
+<script>$("#credit").hide();$("#info").hover(function(){$("#credit").show();},function(){$("#credit").hide();});</script></body>
+</html>
